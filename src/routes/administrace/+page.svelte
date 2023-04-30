@@ -54,7 +54,7 @@
   
     <Modal bind:open={currentModalOpen} on:close={closeModal}>
       <h3 class="mb-4">{currentModalContent}</h3>
-      <Button on:click={closeModal}>Close</Button>
+      <Button on:click={closeModal}>Zavřít</Button>
     </Modal>
   </main>
   
