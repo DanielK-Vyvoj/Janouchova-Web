@@ -3,6 +3,6 @@
 
 </script>
 <div class="w-full mt-48">
-    <img src="https://firebasestorage.googleapis.com/v0/b/jk-app-24506.appspot.com/o/C5998B41-A02A-4AAE-947C-C5C06242F486.png?alt=media&token=ea06ef55-ac4c-42c8-a171-2ccc98035136" alt="Děti" class="w-1591.2 h-451 object-contain">
+    <img src="https://firebasestorage.googleapis.com/v0/b/jk-app-24506.appspot.com/o/Bez%20na%CC%81zvu%20(800%C2%A0%C3%97%C2%A0400%C2%A0px)%20(800%C2%A0%C3%97%C2%A0200%C2%A0px).png?alt=media&token=7b87d823-25dc-44b4-ab5e-5898e6dd4bc9" alt="Děti" class="w-1591.2 h-451 object-contain">
 </div>
   
