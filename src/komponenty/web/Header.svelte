@@ -5,8 +5,75 @@
   .navbar {
     background-color: white;
   }
+  .navbar ul {
+    display: none;
+  }
+  .navbar.active ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: white;
+    padding: 20px;
+    z-index: 100;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .navbar li {
+    margin-bottom: 10px;
+  }
+  .navbar li:last-child {
+    margin-bottom: 0;
+  }
+  .navbar a {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  .navbar a:hover {
+    background-color: #efefef;
+    color: black;
+  }
+  .menu-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/60/60992.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    cursor: pointer;
+  }
+  .menu-icon.active {
+    transform: rotate(90deg);
+  }
+  @media (min-width: 768px) {
+    .navbar ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .navbar li {
+      margin-bottom: 0;
+    }
+    .navbar li:not(:last-child) {
+      margin-right: 20px;
+    }
+    .navbar a {
+      padding: 10px 20px;
+    }
+    .menu-icon {
+      display: none;
+    }
+  }
 </style>
-
 <script>
     import { onMount } from 'svelte';
     
