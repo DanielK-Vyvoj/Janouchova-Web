@@ -15,14 +15,14 @@
         <div class="w-24 h-24 bg-transparent rounded-full flex items-center justify-center">
           <img src="https://firebasestorage.googleapis.com/v0/b/jk-app-24506.appspot.com/o/dsad.png?alt=media&token=5e960488-2e2c-4f0b-a5bf-807bdddcdc54" alt="ikonka 2" class="w-24 h-24 mt-24 rounded-full object-cover object-center">
         </div>
-        <h3 class=" mt-16 text-lg font-medium flex-grow text-center mt-6">Kontakt</h3>
+        <h3 class="mt-16 text-lg font-medium flex-grow text-center">Kontakt</h3>
         <p class="mt-1 text-gray-500 flex-grow text-center" style="line-height: 1.5rem;">Telefon: +420 380 741 055 <br>E-mail: mudrjanouchova@seznam.cz<br>IČO:72038594</p>
       </div>
       <div class="w-96 h-96 bg-blue-200 rounded-lg shadow-md flex flex-col items-center justify-center">
         <div class="w-24 h-24 bg-transparent rounded-full flex items-center justify-center">
           <img src="https://firebasestorage.googleapis.com/v0/b/jk-app-24506.appspot.com/o/asda.png?alt=media&token=335136dc-6e8e-4a56-a81c-1e2ba06f13bd" alt="ikonka 3" class="w-24 h-24 mt-24 rounded-full object-cover">
         </div>
-        <h3 class="mt-16 text-lg font-medium flex-grow text-center mt-6">Adresa</h3>
+        <h3 class="mt-16 text-lg font-medium flex-grow text-center">Adresa</h3>
         <p class="mb-10 text-gray-500 flex-grow text-center">Budějovická 45, 382 03 Křemže</p>
         </div>    
           </div>

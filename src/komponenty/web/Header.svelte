@@ -103,8 +103,8 @@
       </div>
       <ul class="flex items-center space-x-8">
         <li><a href="#" class="text-white hover:bg-pink-500 hover:text-white transition duration-300 ease-in-out rounded-lg py-1 px-3 bg-pink-400">Domů</a></li>
-        <li><a href="#" class="text-white hover:bg-purple-500 hover:text-white transition duration-300 ease-in-out rounded-lg py-1 px-3 bg-red-400">O nás</a></li> 
-        <li><a href="#" class="text-white hover:bg-green-500 hover:text-white transition duration-300 ease-in-out rounded-lg py-1 px-3 bg-green-400">Kontakt</a></li>
+        <li><a href="#" class="text-white hover:bg-purple-500 hover:text-white transition duration-300 ease-in-out rounded-lg py-1 px-3 bg-red-400">Služby</a></li> 
+        <li><a href="#" class="text-white hover:bg-green-500 hover:text-white transition duration-300 ease-in-out rounded-lg py-1 px-3 bg-green-400">Ceník</a></li>
         <li><a href="#" class="text-white hover:bg-blue-500 hover:text-white transition duration-300 ease-in-out rounded-lg py-1 px-3 bg-blue-400">Pro děti</a></li>
       </ul>
       <button class="animate-btn bg-green-500 text-white font-bold py-2 px-4 rounded mr-36">
