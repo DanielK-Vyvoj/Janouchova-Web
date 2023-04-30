@@ -2,11 +2,10 @@
     import { Button } from "carbon-components-svelte";
   
     const buttons = [
-      { label: "Button 1" },
-      { label: "Button 2" },
-      { label: "Button 3" },
-      { label: "Button 4" },
-      { label: "Button 5" },
+      { label: "Upravit Aktulity" },
+      { label: "Upravit Novinky" },
+      { label: "Upravit Ordinační dobu" },
+      { label: "Upravit kontakt" },
     ];
   </script>
   
