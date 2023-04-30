@@ -33,6 +33,9 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"firebase": "^9.21.0"
+		"@glidejs/glide": "^3.6.0",
+		"@splidejs/splide": "^4.1.4",
+		"firebase": "^9.21.0",
+		"flickity": "^3.0.0"
 	}
 }
