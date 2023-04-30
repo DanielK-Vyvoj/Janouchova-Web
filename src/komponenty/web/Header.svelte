@@ -1,3 +1,12 @@
+<style>
+  body {
+    overflow: hidden;
+  }
+  .navbar {
+    background-color: white;
+  }
+</style>
+
 <script>
     import { onMount } from 'svelte';
     
@@ -18,8 +27,9 @@
       `;
       document.head.appendChild(style);
     });
-  </script>
-<nav class="fixed top-0 left-0 w-full z-10 bg-opacity-50 backdrop-filter backdrop-blur-md p-4">
+</script>
+
+<nav class="navbar fixed top-0 left-0 w-full z-10 bg-opacity-50 backdrop-filter backdrop-blur-md p-4">
     <div class="container mx-auto flex justify-between items-center">
       <div class="logo ml-36">
         <img src="https://firebasestorage.googleapis.com/v0/b/jk-app-24506.appspot.com/o/cropped-B714C30F-3A65-4AE0-A609-1F98CE3A39DE.png?alt=media&token=a07f0ddc-694e-4383-950a-c4cc8ca24628" alt="Logo" class="h-36">
@@ -35,7 +45,7 @@
       </button>
     </div>
   </nav>
-  
+
   
   
   
