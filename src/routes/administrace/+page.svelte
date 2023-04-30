@@ -17,6 +17,8 @@
   
   <script lang="ts">
     import { Button, Modal } from "carbon-components-svelte";
+    import { onMount } from "svelte";
+
   
     const buttons = [
       { label: "Upravit O nás", modalContent: "Upravit O nás" },
@@ -27,19 +29,24 @@
       { label: "Upravit Služby", modalContent: "Upravit Služby" },
       { label: "Upravit Ceník", modalContent: "Upravit Ceník" },
     ];
-  
     let currentModalContent = "";
-    let currentModalOpen = false;
-  
-    function openModal(modalContent: string) {
-      currentModalContent = modalContent;
-      currentModalOpen = true;
-    }
-  
-    function closeModal() {
-      currentModalContent = "";
-      currentModalOpen = false;
-    }
+  let currentModalOpen = false;
+  let editorContent = "";
+
+  function openModal(modalContent: string) {
+    currentModalContent = modalContent;
+    currentModalOpen = true;
+  }
+
+  function closeModal() {
+    currentModalContent = "";
+    currentModalOpen = false;
+  }
+
+  onMount(() => {
+    const textarea = document.getElementById("editor") as HTMLTextAreaElement;
+    editorContent = textarea.value;
+  });
   </script>
   
   <main class="flex flex-col items-center justify-center">
@@ -54,7 +61,8 @@
   
     <Modal bind:open={currentModalOpen} on:close={closeModal}>
       <h3 class="mb-4">{currentModalContent}</h3>
-      <Button on:click={closeModal}>Zavřít</Button>
+      <textarea id="editor" class="w-full h-64 mb-4 p-2" bind:value={editorContent}></textarea>
+      <Button on:click={closeModal}>Zavrit</Button>
     </Modal>
   </main>
   
