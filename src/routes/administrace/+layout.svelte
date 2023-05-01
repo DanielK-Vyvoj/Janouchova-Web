@@ -32,7 +32,7 @@
     };
   </script>
   
-  <div class="flex h-screen bg-gray-100">
+  <div class="flex h-screen">
     <NavigaceMenu {user} />
   
     <div class="flex-1 p-10">
