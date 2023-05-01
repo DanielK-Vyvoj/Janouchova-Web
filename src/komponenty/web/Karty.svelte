@@ -1,6 +1,37 @@
 <script lang="ts">
 
+import { db } from '../../firebase/Firebase';
+  import { ref, onValue } from 'firebase/database';
+  import { onMount } from 'svelte';
 
+  let OnasText = '';
+  let Email = '';
+  let Telefon = '';
+  let Ico = '';
+
+  onMount(() => {
+    // získání textu o-nas, emailu, telefonu a ico z databáze
+    const onasRef = ref(db, 'Texty/O-Nas');
+    const emailRef = ref(db, 'Kontakt/Email');
+    const telefonRef = ref(db, 'Kontakt/Telefon');
+    const icoRef = ref(db, 'Firma/Ico');
+  
+    onValue(onasRef, (snapshot) => {
+      OnasText = snapshot.val().text;
+    });
+
+    onValue(emailRef, (snapshot) => {
+      Email = snapshot.val();
+    });
+
+    onValue(telefonRef, (snapshot) => {
+      Telefon = snapshot.val();
+    });
+
+    onValue(icoRef, (snapshot) => {
+      Ico = snapshot.val();
+    });
+  });
 </script>
 <div class="flex justify-center items-center h-screen">
     <div class="grid grid-cols-3 gap-12">
@@ -16,7 +47,7 @@
           <img src="https://firebasestorage.googleapis.com/v0/b/jk-app-24506.appspot.com/o/dsad.png?alt=media&token=5e960488-2e2c-4f0b-a5bf-807bdddcdc54" alt="ikonka 2" class="w-24 h-24 mt-24 rounded-full object-cover object-center">
         </div>
         <h3 class="mt-16 text-lg font-medium flex-grow text-center">Kontakt</h3>
-        <p class="mt-1 text-gray-500 flex-grow text-center" style="line-height: 1.5rem;">Telefon: +420 380 741 055 <br>E-mail: mudrjanouchova@seznam.cz<br>IČO:72038594</p>
+        <p class="mt-1 text-gray-500 flex-grow text-center" style="line-height: 1.5rem;">{Telefon} <br>{Email}<br>{Ico}</p>
       </div>
       <div class="w-96 h-96 bg-blue-200 rounded-lg shadow-md flex flex-col items-center justify-center">
         <div class="w-24 h-24 bg-transparent rounded-full flex items-center justify-center">
