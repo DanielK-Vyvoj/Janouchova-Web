@@ -1,21 +1,18 @@
-<script>
+<script lang="ts">
     
-    import { getDatabase, ref, onValue } from 'firebase/database';
+import { getDatabase, ref, onValue } from 'firebase/database';
   import { onMount } from 'svelte';
 
-  let OnasText = '';
+  let AktulityText = '';
 
   onMount(() => {
     // získání textu o-nas
-    const dbRef = ref(getDatabase(), 'Texty/O-Nas');
+    const dbRef = ref(getDatabase(), 'Texty/Aktuality');
 
     onValue(dbRef, (snapshot) => {
-      OnasText = snapshot.val();
+      AktulityText = snapshot.val();
     });
   });
-
-
-
 
     let date = '';
     let selectedDate = '';
@@ -30,7 +27,7 @@
     <h1 class="text-xl font-medium mb-4 text-center">Upravit sekci Aktuality</h1>
     
     <label for="text" class="block font-medium text-gray-700">Dosavadní Text</label>
-    <textarea id="text" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm mb-4" rows="4" bind:value={OnasText}></textarea>
+    <textarea id="text" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm mb-4" rows="4" bind:value={AktulityText}></textarea>
     
  
     <label for="box" class="block font-medium text-gray-700">Nový text:</label>
