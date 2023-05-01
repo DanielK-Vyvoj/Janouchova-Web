@@ -3,25 +3,25 @@
     import { onMount } from 'svelte';
     import Swal from 'sweetalert2';
   
-    let OnasText = '';
+    let telefon = '';
     let boxText = '';
     let isLoaded = false;
   
     onMount(async () => {
-      // Získání textu o-nas
-      const dbRef = ref(getDatabase(), 'Texty/O-Nas');
+      // Získání emailu
+      const dbRef = ref(getDatabase(), 'Texty/Kontakt/Telefon');
   
       const snapshot = await get(dbRef);
       if (snapshot.exists()) {
-        OnasText = snapshot.val();
+        telefon = snapshot.val();
         isLoaded = true;
       }
     });
   
     async function addEdit() {
-      // Aktualizace textu v databázi
-      const dbRef = ref(getDatabase(), 'Texty/O-Nas');
-      await update(dbRef, { text: boxText.toString() });
+      // Aktualizace emailu v databázi
+      const dbRef = ref(getDatabase(), 'Texty/Kontakt/Telefon');
+      await update(dbRef, boxText.toString());
   
       // Zobrazení notifikace po úspěšném uložení dat
       Swal.fire('Úspěšně uloženo!', '', 'success');
@@ -29,18 +29,18 @@
   </script>
   
   <div class="max-w-md mx-auto">
-    <label for="text" class="text-lg text-center block font-medium text-gray-700">Dosavadní Text</label>
+    <label for="text" class="text-lg text-center block font-medium text-gray-700">Dosavadní Telefon</label>
     {#if isLoaded}
-      <p class="text-blue-500 text-base text-center">{OnasText.text}</p>
+      <p class="text-blue-500 text-base text-center">{telefon}</p>
     {/if}
   
-    <label for="box" class="block font-medium text-gray-700">Nový text:</label>
-    <textarea
+    <label for="box" class="block font-medium text-gray-700">Nový Telefon:</label>
+    <input
+      type="text"
       id="box"
       class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm mb-4"
-      rows="4"
       bind:value={boxText}
-    ></textarea>
+    />
   
     <button
       type="button"
