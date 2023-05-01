@@ -11,7 +11,7 @@
     const handleLogout = async () => {
       try {
         await auth.signOut();
-        goto('/prihlaseni');
+        goto('/administrace/prihlaseni');
       } catch (error) {
         console.log(error);
       }
