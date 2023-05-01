@@ -3,6 +3,7 @@
 
     import Header from "../../komponenty/web/Header.svelte";
     import Deti from "../../komponenty/web/Deti.svelte";
+  
 
     const data = [
     { name: "Vyšetření na ŘP", price: "400kč" },
@@ -72,6 +73,7 @@
               <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
                 <td class="py-2 px-4">Nastřelení náušnic (jedna náušnice)</td>
                 <td class="py-2 px-4 text-right">250Kč</td>
-              </tr>
-              
+              </tr> 
       </body>
+
+      <Ka

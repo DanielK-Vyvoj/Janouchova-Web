@@ -3,14 +3,14 @@
 import { getDatabase, ref, onValue } from 'firebase/database';
   import { onMount } from 'svelte';
 
-  let AktulityText = '';
+  let AktualityText = '';
 
   onMount(() => {
     // získání textu o-nas
     const dbRef = ref(getDatabase(), 'Texty/Aktuality');
 
     onValue(dbRef, (snapshot) => {
-      AktulityText = snapshot.val();
+      AktualityText = snapshot.val();
     });
   });
 
@@ -27,7 +27,7 @@ import { getDatabase, ref, onValue } from 'firebase/database';
     <h1 class="text-xl font-medium mb-4 text-center">Upravit sekci Aktuality</h1>
     
     <label for="text" class="block font-medium text-gray-700">Dosavadní Text</label>
-    <textarea id="text" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm mb-4" rows="4" bind:value={AktulityText}></textarea>
+    <textarea id="text" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm mb-4" rows="4" bind:value={AktualityText}></textarea>
     
  
     <label for="box" class="block font-medium text-gray-700">Nový text:</label>
