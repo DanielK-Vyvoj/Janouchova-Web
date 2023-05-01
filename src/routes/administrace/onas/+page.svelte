@@ -21,7 +21,8 @@
     async function addEdit() {
       // Aktualizace textu v databázi
       const dbRef = ref(getDatabase(), 'Texty/O-Nas');
-      await update(dbRef, boxText.toString());
+      await update(dbRef, { text: boxText.toString() });
+  
       // Zobrazení notifikace po úspěšném uložení dat
       Swal.fire('Úspěšně uloženo!', '', 'success');
     }
@@ -30,7 +31,7 @@
   <div class="max-w-md mx-auto">
     <label for="text" class="text-lg text-center block font-medium text-gray-700">Dosavadní Text</label>
     {#if isLoaded}
-      <p class="text-blue-500 text-base text-center">{JSON.stringify(OnasText)}</p>
+      <p class="text-blue-500 text-base text-center">{OnasText.text}</p>
     {/if}
   
     <label for="box" class="block font-medium text-gray-700">Nový text:</label>
@@ -49,5 +50,4 @@
       Přidat úpravu
     </button>
   </div>
-  
   

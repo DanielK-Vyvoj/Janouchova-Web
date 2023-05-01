@@ -3,6 +3,7 @@
 
     import Header from "../../komponenty/web/Header.svelte";
     import Deti from "../../komponenty/web/Deti.svelte";
+    import Karty from "../../komponenty/web/Karty.svelte";
   
 
     const data = [
@@ -76,4 +77,4 @@
               </tr> 
       </body>
 
-      <Ka
+      <Karty/>
