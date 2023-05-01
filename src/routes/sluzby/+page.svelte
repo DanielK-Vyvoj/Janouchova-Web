@@ -27,13 +27,13 @@
     <table class="table-auto border-collapse w-full mt-8">
       <thead>
         <tr>
-          <th class="border-l-4 border-yellow-500 px-4 py-2 font-semibold text-sm uppercase text-center">Název</th>
+        
         </tr>
       </thead>
       <tbody>
         {#each services as service, i}
       <tr class="{i % 2 === 0 ? 'bg-blue-100' : 'bg-green-100'} hover:bg-pink-300 transition-colors duration-500">
-        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{service.name}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 text-center">{service.name}</td>
       </tr>
     {/each}
       </tbody>

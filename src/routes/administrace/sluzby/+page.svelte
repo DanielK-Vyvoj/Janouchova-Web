@@ -129,6 +129,7 @@
     {#if isLoaded}
     <table class="w-full table-fixed">
       <thead>
+        
         <tr>
           <th class="w-1/2 px-4 py-2 text-left font-medium text-gray-700">Název služby</th>
           <th class="w-1/4 px-4 py-2 text-center font-medium text-gray-700">Akce</th>
