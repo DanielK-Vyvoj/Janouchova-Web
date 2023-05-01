@@ -19,13 +19,23 @@
     });
   
     async function addEdit() {
-      // Aktualizace telefonu v databázi
-      const dbRef = ref(getDatabase(), 'Texty/Kontakt/Telefon');
-      await update(dbRef, boxText.toString());
-  
-      // Zobrazení notifikace po úspěšném uložení dat
-      Swal.fire('Úspěšně uloženo!', '', 'success');
-    }
+  const dbRef = ref(getDatabase(), 'Texty/Kontakt/Telefon');
+
+  const result = await Swal.fire({
+    title: 'Opravdu chcete aktualizovat telefonní číslo?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Ano, aktualizovat',
+    cancelButtonText: 'Zrušit'
+  });
+
+  if (result.isConfirmed) {
+    await update(dbRef, boxText.toString());
+    Swal.fire('Úspěšně uloženo! Aktualizujte tuto stránku', '', 'success');
+  }
+}
   </script>
   
   <div class="max-w-md mx-auto">

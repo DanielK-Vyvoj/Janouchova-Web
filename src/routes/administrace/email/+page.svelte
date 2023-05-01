@@ -19,13 +19,26 @@
   });
 
   async function updateEmail() {
-    // Aktualizace emailu v databázi
-    const dbRef = ref(getDatabase(), 'Texty/Kontakt/Email');
-    const updateData = { text: newEmail };
-    await update(dbRef, updateData);
+    // Potvrzení aktualizace dat pomocí SweetAlert2
+    const result = await Swal.fire({
+      title: 'Opravdu chcete aktualizovat Email?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Ano, aktualizovat',
+      cancelButtonText: 'Zrušit'
+    });
 
-    // Zobrazení notifikace po úspěšném uložení dat
-    Swal.fire('Úspěšně uloženo!', '', 'success');
+    if (result.isConfirmed) {
+      // Aktualizace emailu v databázi
+      const dbRef = ref(getDatabase(), 'Texty/Kontakt/Email');
+      const updateData = { text: newEmail };
+      await update(dbRef, updateData);
+
+      // Zobrazení notifikace po úspěšném uložení dat
+      Swal.fire('Úspěšně uloženo! Aktualizujte tuto stránku', '', 'success');
+    }
   }
 </script>
 

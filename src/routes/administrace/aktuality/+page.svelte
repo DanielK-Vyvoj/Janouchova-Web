@@ -19,12 +19,25 @@
     });
   
     async function addEdit() {
-      // Aktualizace textu v databázi
-      const dbRef = ref(getDatabase(), 'Texty/Aktuality');
-      await update(dbRef, { text: boxText.toString() });
+      // Potvrzení aktualizace dat pomocí SweetAlert2
+      const result = await Swal.fire({
+        title: 'Opravdu chcete aktualizovat text Aktualit?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ano, aktualizovat',
+        cancelButtonText: 'Zrušit'
+      });
   
-      // Zobrazení notifikace po úspěšném uložení dat
-      Swal.fire('Úspěšně uloženo!', '', 'success');
+      if (result.isConfirmed) {
+        // Aktualizace textu v databázi
+        const dbRef = ref(getDatabase(), 'Texty/Aktuality');
+        await update(dbRef, { text: boxText.toString() });
+  
+        // Zobrazení notifikace po úspěšném uložení dat
+        Swal.fire('Úspěšně uloženo!', '', 'success');
+      }
     }
   </script>
   
@@ -50,4 +63,5 @@
       Přidat úpravu
     </button>
   </div>
+
   
