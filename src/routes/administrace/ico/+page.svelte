@@ -8,7 +8,7 @@
     let isLoaded = false;
   
     onMount(async () => {
-      // Získání emailu
+      // Získání ICO
       const dbRef = ref(getDatabase(), 'Texty/Kontakt/ICO');
   
       const snapshot = await get(dbRef);
@@ -19,7 +19,7 @@
     });
   
     async function addEdit() {
-      // Aktualizace emailu v databázi
+      // Aktualizace ICO v databázi
       const dbRef = ref(getDatabase(), 'Texty/Kontakt/ICO');
       await update(dbRef, boxText.toString());
   
@@ -29,25 +29,10 @@
   </script>
   
   <div class="max-w-md mx-auto">
-    <label for="text" class="text-lg text-center block font-medium text-gray-700">Dosavadní IČO</label>
+    <label for="text" class="text-lg text-center block font-medium text-gray-700">Dosavadní ICO</label>
     {#if isLoaded}
       <p class="text-blue-500 text-base text-center">{ico}</p>
     {/if}
   
-    <label for="box" class="block font-medium text-gray-700">Nové IČO:</label>
-    <input
-      type="text"
-      id="box"
-      class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm mb-4"
-      bind:value={boxText}
-    />
-  
-    <button
-      type="button"
-      class="bg-blue-500 text-white px-3 py-2 rounded-md shadow-sm"
-      on:click={addEdit}
-    >
-      Přidat úpravu
-    </button>
-  </div>
+    <label for="box" class="block font-medium text-gray-700">
   

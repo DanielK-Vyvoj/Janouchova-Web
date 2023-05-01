@@ -8,7 +8,7 @@
     let isLoaded = false;
   
     onMount(async () => {
-      // Získání emailu
+      // Získání telefonu
       const dbRef = ref(getDatabase(), 'Texty/Kontakt/Telefon');
   
       const snapshot = await get(dbRef);
@@ -19,7 +19,7 @@
     });
   
     async function addEdit() {
-      // Aktualizace emailu v databázi
+      // Aktualizace telefonu v databázi
       const dbRef = ref(getDatabase(), 'Texty/Kontakt/Telefon');
       await update(dbRef, boxText.toString());
   
@@ -29,12 +29,12 @@
   </script>
   
   <div class="max-w-md mx-auto">
-    <label for="text" class="text-lg text-center block font-medium text-gray-700">Dosavadní Telefon</label>
+    <label for="text" class="text-lg text-center block font-medium text-gray-700">Dosavadní telefon</label>
     {#if isLoaded}
       <p class="text-blue-500 text-base text-center">{telefon}</p>
     {/if}
   
-    <label for="box" class="block font-medium text-gray-700">Nový Telefon:</label>
+    <label for="box" class="block font-medium text-gray-700">Nový telefon:</label>
     <input
       type="text"
       id="box"
