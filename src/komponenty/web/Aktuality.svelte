@@ -1,22 +1,21 @@
-<script lang="ts">
-import { getFirestore, collection, onSnapshot } from 'firebase/firestore';
+<script lang="ts"> 
+
+import { db } from '../../firebase/Firebase';
+import { getDatabase, ref, onValue } from 'firebase/database';
 import { onMount } from 'svelte';
 
 let AktualityText = '';
 
 onMount(() => {
-  const db = getFirestore();
-  const query = collection(db, 'TextyWeb', 'Aktuality');
+  // získání textu o-nas
+  const dbRef = ref(getDatabase(db), 'Texty/Aktuality');
 
-  onSnapshot(query, (snapshot) => {
-    snapshot.docChanges().forEach((change) => {
-      if (change.type === 'added' || change.type === 'modified') {
-        AktualityText = change.doc.data().text;
-      }
-    });
+  onValue(dbRef, (snapshot) => {
+    AktualityText = snapshot.val();
   });
 });
 </script>
+
 
 <div class="flex items-center justify-center py-16">
     <div class="relative flex bg-white rounded-lg shadow-lg overflow-hidden w-24/36 lg:w-1/2">

@@ -1,7 +1,7 @@
 <script lang="ts">
 
-	import Aktuality from "../komponenty/web/Aktuality.svelte";
-	import Karty from "../komponenty/web/Karty.svelte";
+import Aktuality from "../komponenty/web/Aktuality.svelte";
+import Karty from "../komponenty/web/Karty.svelte";
 import ONas from "../komponenty/web/O-nas.svelte";
 import Header from "../komponenty/web/Header.svelte";
 import Deti from "../komponenty/web/Deti.svelte";
