@@ -103,7 +103,7 @@
       </div>
       <ul class="flex items-center space-x-8">
         <li><a href="/" class="text-white hover:bg-pink-500 hover:text-white transition duration-300 ease-in-out rounded-lg py-1 px-3 bg-pink-400">Domů</a></li>
-        <li><a href="/" class="text-white hover:bg-purple-500 hover:text-white transition duration-300 ease-in-out rounded-lg py-1 px-3 bg-red-400">Služby</a></li> 
+        <li><a href="/sluzby" class="text-white hover:bg-purple-500 hover:text-white transition duration-300 ease-in-out rounded-lg py-1 px-3 bg-red-400">Služby</a></li> 
         <li><a href="/cenik" class="text-white hover:bg-green-500 hover:text-white transition duration-300 ease-in-out rounded-lg py-1 px-3 bg-green-400">Ceník</a></li>
         <li><a href="/" class="text-white hover:bg-blue-500 hover:text-white transition duration-300 ease-in-out rounded-lg py-1 px-3 bg-blue-400">Pro děti</a></li>
       </ul>
