@@ -37,8 +37,7 @@
           <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300" href="/administrace/ordinace-doba">Upravit Ordinační dobu</a>
           <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300" href="/administrace/onas">Upravit O nás</a>
           <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300" href="/administrace/cenik">Upravit Ceník</a>
-          <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300" href="/administrace/kontakt">Upravit Kontakt</a>
-          <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300" href="/administrace/adresa">Upravit Adresu</a>
+          <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300" href="/administrace/kontakt">Upravit Kontakt a Adresu</a>
           <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300" href="/administrace/sluzby">Upravit Služby</a>
         </nav>
       </div>

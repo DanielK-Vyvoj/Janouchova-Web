@@ -1,6 +1,5 @@
 <script lang="ts">
- 
- import { db } from '../../firebase/Firebase';
+  import { db } from '../../firebase/Firebase';
   import { ref, onValue } from 'firebase/database';
   import { onMount } from 'svelte';
 
@@ -8,6 +7,7 @@
   let email = '';
   let telefon = '';
   let ico = '';
+  let adresa = '';
 
   onMount(() => {
     // získání textu o-nas, emailu, telefonu a ico z databáze
@@ -15,7 +15,8 @@
     const emailRef = ref(db, 'Texty/Kontakt/Email/text');
     const telefonRef = ref(db, 'Texty/Kontakt/Telefon');
     const icoRef = ref(db, 'Texty/Kontakt/ICO');
-  
+    const adresaRef = ref(db, 'Texty/Kontakt/Adresa');
+
     onValue(onasRef, (snapshot) => {
       onasText = snapshot.val();
     });
@@ -30,6 +31,10 @@
 
     onValue(icoRef, (snapshot) => {
       ico = snapshot.val();
+    });
+
+    onValue(adresaRef, (snapshot) => {
+      adresa = snapshot.val();
     });
   });
 </script>
@@ -54,7 +59,7 @@
           <img src="https://firebasestorage.googleapis.com/v0/b/jk-app-24506.appspot.com/o/asda.png?alt=media&token=335136dc-6e8e-4a56-a81c-1e2ba06f13bd" alt="ikonka 3" class="w-24 h-24 mt-24 rounded-full object-cover">
         </div>
         <h3 class="mt-16 text-lg font-medium flex-grow text-center">Adresa</h3>
-        <p class="mb-10 text-gray-500 flex-grow text-center">Budějovická 45, 382 03 Křemže</p>
+        <p class="mb-10 text-gray-500 flex-grow text-center">{adresa.text}</p>
         </div>    
           </div>
         </div>
