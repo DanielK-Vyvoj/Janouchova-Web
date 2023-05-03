@@ -3,7 +3,7 @@
     import io from 'socket.io-client';
     import { readable } from 'svelte/store';
   
-    const socket = io();
+    const socket = io('http://janouchova-kremze.cz');
   
     const onlineUsers = readable(0, (set) => {
       socket.on('onlineUsers', (count) => {
