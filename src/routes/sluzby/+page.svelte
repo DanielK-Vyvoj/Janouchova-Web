@@ -27,7 +27,6 @@
     <table class="table-auto border-collapse w-full mt-8">
       <thead>
         <tr>
-        
         </tr>
       </thead>
       <tbody>
