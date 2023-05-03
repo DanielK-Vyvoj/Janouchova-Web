@@ -5,7 +5,7 @@ import "carbon-components-svelte/css/white.css";
 </script>
 
 
-<div>
+<div class="min-h-screen">
 
 <slot />
 
