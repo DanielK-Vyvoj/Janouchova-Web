@@ -8,7 +8,7 @@
     import { db } from '../../firebase/Firebase';
     import { ref, onValue } from 'firebase/database';
   
-    let services = [];
+    let services: any[] = [];
   
   const cenikRef = ref(db, 'Sluzby');
   onValue(cenikRef, (snapshot) => {

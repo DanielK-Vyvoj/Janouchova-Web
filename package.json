@@ -39,7 +39,9 @@
 	"type": "module",
 	"dependencies": {
 		"firebase": "^9.21.0",
+		"socket.io-client": "^4.6.1",
 		"svelte-image": "^0.2.9",
+		"sveltefire": "^0.2.3",
 		"sweetalert2": "^11.7.3"
 	}
 }

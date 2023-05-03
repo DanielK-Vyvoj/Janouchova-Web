@@ -1,6 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getDatabase } from "firebase/database";
+import { getDatabase, ref, onValue } from "firebase/database";
+import { readable } from "svelte/store";
+
 
   const firebaseConfig = {
     apiKey: "AIzaSyDIpTv9uEG4bSjDuz9s2KPsrfOaIZ9Gl3Q",
@@ -17,3 +19,13 @@ const auth = getAuth(app);
 const db = getDatabase(app);
 
 export { app, auth, db };
+
+
+export function getOnlineUsers() {
+  const onlineUsersRef = ref(db, "onlineUsers");
+  return readable(0, set => {
+    onValue(onlineUsersRef, (snapshot) => {
+      set(snapshot.size);
+    });
+  });
+}

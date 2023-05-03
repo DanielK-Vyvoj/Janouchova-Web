@@ -8,7 +8,7 @@
   import { db } from '../../firebase/Firebase';
   import { ref, onValue } from 'firebase/database';
 
-  let products: any[] = [];
+  let products = [];
 
 const cenikRef = ref(db, 'Cenik');
 onValue(cenikRef, (snapshot) => {
@@ -18,11 +18,13 @@ onValue(cenikRef, (snapshot) => {
  
 
 </script>
+
+<body  class=" min-h-screen bg-fixed bg-no-repeat bg-cover bg-center" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/jk-app-24506.appspot.com/o/POZADI-1.gif?alt=media&token=1484df81-b28b-429b-af9a-57f2a3ca7647')">
   <Header/>
   <Deti/>
   <h1 class="text-6xl font-bold text-center text-black">Ceník</h1>
   
-  <table class="min-h-screen table-auto border-collapse w-full mt-8">
+  <table class="table-auto border-collapse w-full mt-8">
     <thead>
       <tr>
         <th class="border-l-4 border-yellow-500 text-left px-4 py-2 font-semibold text-sm uppercase">Název</th>
@@ -38,4 +40,5 @@ onValue(cenikRef, (snapshot) => {
   {/each}
     </tbody>
   </table>
+    </body>
     <Karty/>
